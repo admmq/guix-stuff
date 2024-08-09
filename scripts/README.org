@@ -1,0 +1,1 @@
+Some scripts I use on Guix systems to simplify my life.
