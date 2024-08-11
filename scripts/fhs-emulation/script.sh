@@ -25,7 +25,5 @@ cd ~ && guix shell --network --container --emulate-fhs \
              --preserve='^DBUS_' --expose=/var/run/dbus \
              --expose=/sys/dev --expose=/sys/devices --expose=/dev/dri \
              --development ungoogled-chromium \
-             bash coreutils curl grep nss-certs gcc-toolchain \
-             pkg-config glib cairo \
-             git zsh node \
+             bash coreutils curl grep nss-certs gcc-toolchain git node \
              --share=$shell_home=$HOME
