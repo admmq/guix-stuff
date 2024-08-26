@@ -46,9 +46,8 @@
                %base-user-accounts))
 
   (packages (append (list
-                     ;; emacs emacs-exwm emacs-desktop-environment
-                     emacs admmq:my-emacs-exwm emacs-desktop-environment
-                     emacs-pdf-tools
+                     emacs emacs-exwm emacs-desktop-environment
+                     emacs-pdf-tools emacs-magit emacs-yasnippet
                      admmq:emacs-stuff
                      xterm)
                     %base-packages))
