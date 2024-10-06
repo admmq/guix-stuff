@@ -69,7 +69,7 @@
                             (extra-options (default-extra-linux-options version)))
   (package
     (name (if extra-version
-              (string-append "linux-libre-" extra-version)
+              (string-append "haha-linux-libre-" extra-version)
               "linux-libre"))
     (version version)
     (source source)
