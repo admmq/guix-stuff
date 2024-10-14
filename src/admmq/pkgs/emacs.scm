@@ -47,7 +47,7 @@
     (inputs
      (list xhost dbus))
     (propagated-inputs
-     (list emacs-xelb))
+     (list gnu:emacs-xelb))
     (arguments
      (list
       #:emacs emacs
