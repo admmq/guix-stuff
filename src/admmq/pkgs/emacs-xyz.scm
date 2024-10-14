@@ -179,7 +179,8 @@
                             (search-input-file inputs "/bin/xhost")
                             (search-input-file inputs "/bin/dbus-launch")
                             (search-input-file inputs "/bin/emacs")
-                            `((require 'exwm)
+                            `(progn
+                              (require 'exwm)
                               (exwm-enable)
                               (server-start)))))
                 (chmod exwm-executable #o555)))))))
