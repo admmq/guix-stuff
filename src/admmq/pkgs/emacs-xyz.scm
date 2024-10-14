@@ -180,7 +180,8 @@
                             (search-input-file inputs "/bin/dbus-launch")
                             (search-input-file inputs "/bin/emacs")
                             `(require 'exwm)
-                            `(exwm-enable))))
+                            `(exwm-enable)
+                            `(server-start))))
                 (chmod exwm-executable #o555)))))))
     (home-page "https://github.com/ch11ng/exwm")
     (description
