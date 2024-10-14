@@ -1,6 +1,9 @@
 (define-module (admmq pkgs emacs)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (gnu packages)
+  #:use-module (gnu packages emacs-xyz)
+  #:use-module (gnu packages xorg)
+  #:use-module (gnu packages glib)
   #:use-module (guix packages)
   #:use-module (guix git-download)
   #:use-module (guix download)
@@ -41,6 +44,8 @@
   (package
     (inherit emacs-exwm)
     (name "admmq-emacs-exwm")
+    (inputs
+     (list xhost dbus))
     (propagated-inputs
      (list emacs-xelb))
     (arguments
