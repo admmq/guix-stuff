@@ -1,7 +1,7 @@
 (define-module (admmq pkgs emacs)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (gnu packages)
-  #:use-module (gnu packages emacs-xyz)
+  #:use-module ((gnu packages emacs-xyz) #:prefix gnu:)
   #:use-module (gnu packages xorg)
   #:use-module (gnu packages glib)
   #:use-module (guix packages)
@@ -40,9 +40,9 @@
       (description "My emacs package")
       (license license:gpl3+))))
 
-(define-public admmq-emacs-exwm
+(define-public emacs-exwm
   (package
-    (inherit emacs-exwm)
+    (inherit gnu:emacs-exwm)
     (name "admmq-emacs-exwm")
     (inputs
      (list xhost dbus))
