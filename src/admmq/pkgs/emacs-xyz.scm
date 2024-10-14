@@ -179,18 +179,8 @@
                             (search-input-file inputs "/bin/xhost")
                             (search-input-file inputs "/bin/dbus-launch")
                             (search-input-file inputs "/bin/emacs")
-                            '(cond
-                              ((file-exists-p "~/.exwm")
-                               (load-file "~/.exwm"))
-                              ((not (featurep 'exwm))
-                               (require 'exwm)
-                               ;; (setq exwm-input-global-keys (backquote (([?\s-r] . exwm-reset))))
-                               (exwm-enable)
-                               (message (concat "exwm configuration not found. "
-                                                "Falling back to default minimal configuration. "
-                                                "An example configuration can be found here "
-                                                "https://github.com/emacs-exwm/exwm"
-                                                "/wiki/Configuration-Example")))))))
+                            (require 'exwm)
+                            (exwm-enable))))
                 (chmod exwm-executable #o555)))))))
     (home-page "https://github.com/ch11ng/exwm")
     (description
