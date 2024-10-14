@@ -183,9 +183,9 @@
                             ;;   (require 'exwm)
                             ;;   (exwm-enable)
                             ;;   (server-start)))))
-                            '(require 'exwm)
-                            '(exwm-enable)
-                            '(server-start))))
+                            ('(require 'exwm)
+                             '(exwm-enable)
+                             '(server-start)))))
                 (chmod exwm-executable #o555)))))))
     (home-page "https://github.com/ch11ng/exwm")
     (description
