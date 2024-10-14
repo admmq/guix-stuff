@@ -1,4 +1,5 @@
 (define-module (admmq pkgs emacs-xyz)
+  #:use-module (gnu packages emacs-xyz)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix packages)
   #:use-module (guix cvs-download)
