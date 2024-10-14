@@ -1,6 +1,7 @@
 (define-module (admmq pkgs emacs)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (gnu packages)
+  #:use-module (gnu packages emacs)
   #:use-module ((gnu packages emacs-xyz) #:prefix gnu:)
   #:use-module (gnu packages xorg)
   #:use-module (gnu packages glib)
