@@ -40,7 +40,7 @@
       (description "My emacs package")
       (license license:gpl3+))))
 
-(define-public emacs-exwm
+(define-public admmq-emacs-exwm
   (package
     (inherit emacs-exwm)
     (name "admmq-emacs-exwm")
