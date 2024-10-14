@@ -179,8 +179,8 @@
                             (search-input-file inputs "/bin/xhost")
                             (search-input-file inputs "/bin/dbus-launch")
                             (search-input-file inputs "/bin/emacs")
-                            (require 'exwm)
-                            (exwm-enable))))
+                            `(require 'exwm)
+                            `(exwm-enable))))
                 (chmod exwm-executable #o555)))))))
     (home-page "https://github.com/ch11ng/exwm")
     (description
