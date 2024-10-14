@@ -184,7 +184,7 @@
                                (load-file "~/.exwm"))
                               ((not (featurep 'exwm))
                                (require 'exwm)
-                               (setq exwm-input-global-keys `(([?\s-r] . exwm-reset)))
+                               (setq exwm-input-global-keys (backquote (([?\s-r] . exwm-reset))))
                                (exwm-enable)
                                (message (concat "exwm configuration not found. "
                                                 "Falling back to default minimal configuration. "

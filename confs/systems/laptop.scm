@@ -4,12 +4,13 @@
              (nongnu system linux-initrd)
              ((admmq srvcs) #:prefix admmq:)
              ((admmq pkgs emacs) #:prefix admmq:)
+             ((admmq pkgs emacs-xyz) #:prefix admmq:)
              ((my-local-packages)  #:prefix local:))
 
 (use-service-modules desktop ssh)
-(use-package-modules bootloaders certs terminals
-		     emacs emacs-xyz
-		     ratpoison suckless wm)
+(use-package-modules bootloaders certs terminals ssh
+		     ratpoison suckless wm version-control
+                     emacs emacs-xyz)
 
 (operating-system
   (host-name "grimoire")
@@ -31,7 +32,7 @@
                          (mount-point "/")
                          (type "ext4"))
                        (file-system
-                         (device (uuid "6742-87C9" 'fat))
+                         (device (file-system-label "GUIXBOOT"))
                          (mount-point "/boot/efi")
                          (type "vfat")))
                  %base-file-systems))
@@ -45,11 +46,10 @@
                %base-user-accounts))
 
   (packages (append (list
-                     i3-wm dmenu
-                     emacs emacs-exwm emacs-desktop-environment
+                     emacs admmq:my-emacs-exwm emacs-desktop-environment
                      emacs-magit emacs-pdf-tools
                      admmq:emacs-stuff
-                     kitty)
+                     openssh git kitty)
                     %base-packages))
 
   (services (append (list (service bluetooth-service-type)
