@@ -46,6 +46,7 @@
   (package
     (inherit gnu:emacs-exwm)
     (name "admmq-emacs-exwm")
+    (synopsis "Emacs X window manager")
     (inputs
      (list xhost dbus))
     (propagated-inputs
