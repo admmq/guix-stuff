@@ -6,6 +6,7 @@
   #:use-module (gnu packages xorg)
   #:use-module (gnu packages glib)
   #:use-module (guix packages)
+  #:use-module (guix gexp)
   #:use-module (guix git-download)
   #:use-module (guix download)
   #:use-module (guix build-system emacs))
@@ -78,10 +79,6 @@
                             (search-input-file inputs "/bin/xhost")
                             (search-input-file inputs "/bin/dbus-launch")
                             (search-input-file inputs "/bin/emacs")
-                            ;; `(progn
-                            ;;   (require 'exwm)
-                            ;;   (exwm-enable)
-                            ;;   (server-start)))))
                             '(progn (require 'exwm)
                                     (exwm-enable)
                                     (server-start)))))
