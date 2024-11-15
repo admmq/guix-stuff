@@ -17,7 +17,7 @@
               (file-name (git-file-name name version))
               (sha256
                (base32
-                "0i7fa7l3gdqkkgz5ddayp6m46dgbj9rqlz35xffrcbyiz3gpljy0"))))
+                "17wcr1andd42hx9cln594r76685klx8lyxzf1gn9gc9nqg1kjqdv"))))
     (build-system maven-build-system)
     (home-page "")
     (synopsis "")
