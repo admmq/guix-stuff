@@ -39,4 +39,25 @@
                                   "/mockito-core-" version "-sources.jar"))
               (sha256
                (base32
-                "0xh0fwsg9yslg6x1gnll00crf05vgb3nfwm7kywcgh09p1qqyy0c"))))))
+                "0xh0fwsg9yslg6x1gnll00crf05vgb3nfwm7kywcgh09p1qqyy0c"))))
+    (arguments
+     `(#:jar-name "mockito.jar"
+       #:tests? #f ; no tests included
+       ;; FIXME: patch-and-repack does not support jars, so we have to apply
+       ;; patches in build phases.
+       #:phases
+       (modify-phases %standard-phases
+         ;; Mockito was developed against a different version of hamcrest,
+         ;; which does not require matcher implementations to provide an
+         ;; implementation of the "describeMismatch" method.  We add this
+         ;; simple definition to pass the build with our version of hamcrest.
+         (add-after 'unpack 'fix-hamcrest-build-error
+           (lambda _
+             (substitute* "src/org/mockito/internal/matchers/LocalizedMatcher.java"
+               (("public Matcher getActualMatcher\\(\\) .*" line)
+                (string-append "
+    public void describeMismatch(Object item, Description description) {
+        actualMatcher.describeMismatch(item, description);
+    }"
+                               line)))
+             #t)))))))
