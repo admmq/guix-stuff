@@ -4,6 +4,7 @@
   #:use-module (gnu packages java)
   #:use-module (guix packages)
   #:use-module (guix git-download)
+  #:use-module (guix download)
   #:use-module (guix build-system maven))
 
 (define-public java-telegrambots
