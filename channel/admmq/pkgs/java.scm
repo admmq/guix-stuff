@@ -39,4 +39,4 @@
                                   "/mockito-core-" version "-sources.jar"))
               (sha256
                (base32
-                "0vmiwnwpf83g2q7kj1rislmja8fpvqkixjhawh7nxnygx6pq11kc"))))))
+                "0xh0fwsg9yslg6x1gnll00crf05vgb3nfwm7kywcgh09p1qqyy0c"))))))
