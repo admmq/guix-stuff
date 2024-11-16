@@ -1,6 +1,7 @@
 (define-module (admmq pkgs java)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (gnu packages)
+  #:use-module (gnu packages java)
   #:use-module (guix packages)
   #:use-module (guix git-download)
   #:use-module (guix build-system maven))
@@ -19,6 +20,8 @@
                (base32
                 "17wcr1andd42hx9cln594r76685klx8lyxzf1gn9gc9nqg1kjqdv"))))
     (build-system maven-build-system)
+    (native-inputs
+     (list java-mockito))
     (home-page "")
     (synopsis "")
     (description "")
