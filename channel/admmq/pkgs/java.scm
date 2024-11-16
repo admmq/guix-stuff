@@ -26,3 +26,15 @@
     (synopsis "")
     (description "")
     (license #f)))
+
+(define-public java-mockito-2
+  (inherit java-mockito-1)
+  (version "2.28.2")
+  (source (origin
+            (method url-fetch)
+            (uri (string-append "https://repo1.maven.org/maven2/"
+                                "org/mockito/mockito-core/" version
+                                "/mockito-core-" version "-sources.jar"))
+            (sha256
+             (base32
+              "0vmiwnwpf83g2q7kj1rislmja8fpvqkixjhawh7nxnygx6pq11kc")))))
