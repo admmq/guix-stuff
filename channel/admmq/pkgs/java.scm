@@ -21,7 +21,7 @@
                 "17wcr1andd42hx9cln594r76685klx8lyxzf1gn9gc9nqg1kjqdv"))))
     (build-system maven-build-system)
     (native-inputs
-     (list java-mockito))
+     (list java-mockito-1))
     (home-page "")
     (synopsis "")
     (description "")
