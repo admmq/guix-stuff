@@ -3,9 +3,9 @@
   #:use-module (guix packages)
   #:use-module (nonguix build-system binary))
 
-(define-public gradle
+(define-public gradle-bin
   (package
-    (name "gradle")
+    (name "gradle-bin")
     (version "0.7")
     (source (origin
               (method url-fetch)
@@ -14,7 +14,7 @@
                                   "-bin.zip"))
               (sha256
                (base32
-                "13b5ab4a889vz39d36f45mhv3mlaxb305wsh3plk3dbjcrkkkirb"))))
+                "1bd6lv990z913i50r2fxys9zknkf8l0fjvndi5vhw2sw1p5lydaf"))))
     (build-system binary-build-system)
     (synopsis  "")
     (supported-systems '("x86_64-linux"))
