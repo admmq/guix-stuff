@@ -49,7 +49,8 @@
                 (method git-fetch)
                 (uri (git-reference
                       (url "https://github.com/libtcod/python-tcod.git")
-                      (commit commit)))
+                      (commit commit)
+                      (recursive? #t)))
                 (file-name (git-file-name name version))
                 (sha256
                  (base32
