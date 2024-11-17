@@ -39,9 +39,11 @@
     (license #f)))
 
 (define-public python-tcod
-  (package
-    (name "python-tcod")
-    (version (git-version "0.0.1" "0" commit))
+  (let ((commit "3d19e29d8b5a6925ba4b287c272635699b99dd42")
+        (revision "0"))
+    (package
+      (name "python-tcod")
+      (version (git-version "0.0.1" revision commit))
       (source (origin
                 (method git-fetch)
                 (uri (git-reference
@@ -51,19 +53,19 @@
                 (sha256
                  (base32
                   "1fqzpr7nw4n0wa0wwv2z3nw3xzihfsasn16hhxh93q3dp5padvhd"))))
-    (build-system python-build-system)
-    ;; (arguments
-    ;;  (list #:tests? #f
-    ;;        #:phases
-    ;;        #~(modify-phases %standard-phases
-    ;;          ;; sanity-check phase fail, but the application seems to be working
-    ;;          (delete 'sanity-check))))
-    ;; (inputs
-    ;;  (list zlib
-    ;;        ijg-libjpeg
-    ;;        libheif))
-    (home-page "")
-    (synopsis "")
-    (description
-     "")
-    (license #f)))
+      (build-system python-build-system)
+      ;; (arguments
+      ;;  (list #:tests? #f
+      ;;        #:phases
+      ;;        #~(modify-phases %standard-phases
+      ;;          ;; sanity-check phase fail, but the application seems to be working
+      ;;          (delete 'sanity-check))))
+      ;; (inputs
+      ;;  (list zlib
+      ;;        ijg-libjpeg
+      ;;        libheif))
+      (home-page "")
+      (synopsis "")
+      (description
+       "")
+      (license #f))))
