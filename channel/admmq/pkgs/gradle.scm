@@ -3,7 +3,8 @@
   #:use-module (guix packages)
   #:use-module (nonguix build-system binary))
 
-(define-public gradle-bin
+;; https://gitlab.com/nonguix/nonguix/-/blob/master/nongnu/packages/cad.scm
+(define-public gradle-bin-0.7
   (package
     (name "gradle-bin")
     (version "0.7")
@@ -21,3 +22,4 @@
     (description "")
     (home-page "")
     (license #f)))
+
