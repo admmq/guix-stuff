@@ -5,7 +5,7 @@
   #:use-module (gnu packages compression)
   #:use-module (gnu packages image)
   #:use-module (gnu packages game-development)
-  #:use-module (gnu packages sdl2)
+  #:use-module (gnu packages sdl)
   #:use-module (gnu packages python-xyz)
   #:use-module (guix packages)
   #:use-module (guix git-download)
