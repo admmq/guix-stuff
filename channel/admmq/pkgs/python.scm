@@ -4,6 +4,7 @@
   #:use-module (gnu packages)
   #:use-module (gnu packages compression)
   #:use-module (gnu packages image)
+  #:use-module (gnu packages game-development)
   #:use-module (guix packages)
   #:use-module (guix git-download)
   #:use-module (guix build-system python))
@@ -54,6 +55,8 @@
                  (base32
                   "0gi4xb1rabmawhdp12j6js6s20wk42v8fwn87bf3b4wc1gkl9ir1"))))
       (build-system python-build-system)
+      (inputs
+       (list libtcod))
       ;; (arguments
       ;;  (list #:tests? #f
       ;;        #:phases
