@@ -9,6 +9,7 @@
   #:use-module (gnu packages python-xyz)
   #:use-module (gnu packages python-web)
   #:use-module (gnu packages python-build)
+  #:use-module (gnu packages check)
   #:use-module (gnu packages libffi)
   #:use-module (gnu packages c)
   #:use-module (guix packages)
