@@ -8,6 +8,7 @@
   #:use-module (gnu packages sdl)
   #:use-module (gnu packages python-xyz)
   #:use-module (gnu packages python-build)
+  #:use-module (gnu packages libffi)
   #:use-module (guix packages)
   #:use-module (guix git-download)
   #:use-module (guix build-system python))
@@ -55,7 +56,7 @@
          (uri (git-reference
                (url "https://github.com/libtcod/python-tcod")
                (commit commit)
-               (recursive? #true)))
+               (recursive? #t)))
          (file-name (git-file-name name version))
          (sha256
           (base32
