@@ -72,3 +72,18 @@
       (description
        "")
       (license #f))))
+
+(define-public my-libtcod
+  (package
+    (inherit libtcod)
+    (name "libtcod")
+    (version "1.24.0")
+    (source (origin
+              (method git-fetch)
+              (uri (git-reference
+                    (url "https://github.com/libtcod/libtcod")
+                    (commit version)))
+              (file-name (git-file-name name version))
+              (sha256
+               (base32
+                "0pzr8ajmbqvh43ldjajx962xirj3rf8ayh344p6mqlrmb8gxrfr5"))))))
