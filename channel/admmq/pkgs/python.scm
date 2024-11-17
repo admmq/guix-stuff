@@ -52,7 +52,7 @@
                 (file-name (git-file-name name version))
                 (sha256
                  (base32
-                  "1fqzpr7nw4n0wa0wwv2z3nw3xzihfsasn16hhxh93q3dp5padvhd"))))
+                  "0gi4xb1rabmawhdp12j6js6s20wk42v8fwn87bf3b4wc1gkl9ir1"))))
       (build-system python-build-system)
       ;; (arguments
       ;;  (list #:tests? #f
