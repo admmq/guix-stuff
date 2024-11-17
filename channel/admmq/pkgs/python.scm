@@ -56,7 +56,7 @@
                   "0gi4xb1rabmawhdp12j6js6s20wk42v8fwn87bf3b4wc1gkl9ir1"))))
       (build-system python-build-system)
       (inputs
-       (list libtcod))
+       (list my-libtcod))
       ;; (arguments
       ;;  (list #:tests? #f
       ;;        #:phases
