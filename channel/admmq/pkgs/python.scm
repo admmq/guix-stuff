@@ -41,7 +41,7 @@
 (define-public python-tcod
   (package
     (name "python-tcod")
-    (version (git-version "0.0.1" revision commit))
+    (version (git-version "0.0.1" "0" commit))
       (source (origin
                 (method git-fetch)
                 (uri (git-reference
