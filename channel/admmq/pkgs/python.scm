@@ -76,7 +76,7 @@
 (define-public my-libtcod
   (package
     (inherit libtcod)
-    (name "libtcod")
+    (name "my-libtcod")
     (version "1.24.0")
     (source (origin
               (method git-fetch)
