@@ -5,6 +5,8 @@
   #:use-module (gnu packages compression)
   #:use-module (gnu packages image)
   #:use-module (gnu packages game-development)
+  #:use-module (gnu packages sdl2)
+  #:use-module (gnu packages python-xyz)
   #:use-module (guix packages)
   #:use-module (guix git-download)
   #:use-module (guix build-system python))
@@ -40,39 +42,50 @@
     (license #f)))
 
 (define-public python-tcod
-  (let ((commit "3d19e29d8b5a6925ba4b287c272635699b99dd42")
-        (revision "0"))
+  ;; named branch is outdated
+  (let ((commit "d3419a5b4593c7df1580427fc07616d798c85856")
+        (revision "1"))
     (package
       (name "python-tcod")
-      (version (git-version "0.0.1" revision commit))
-      (source (origin
-                (method git-fetch)
-                (uri (git-reference
-                      (url "https://github.com/libtcod/python-tcod.git")
-                      (commit commit)
-                      (recursive? #t)))
-                (file-name (git-file-name name version))
-                (sha256
-                 (base32
-                  "0gi4xb1rabmawhdp12j6js6s20wk42v8fwn87bf3b4wc1gkl9ir1"))))
+      (version "13.9.1")
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/libtcod/python-tcod")
+               (commit commit)
+               (recursive? #true)))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32
+           "1b0ligrswvz307bbx5jp8wnnqz52v5s4gcgakxy4i3jvccalm2if"))))
       (build-system python-build-system)
-      (inputs
-       (list my-libtcod))
-      ;; (arguments
-      ;;  (list #:tests? #f
-      ;;        #:phases
-      ;;        #~(modify-phases %standard-phases
-      ;;          ;; sanity-check phase fail, but the application seems to be working
-      ;;          (delete 'sanity-check))))
-      ;; (inputs
-      ;;  (list zlib
-      ;;        ijg-libjpeg
-      ;;        libheif))
-      (home-page "")
-      (synopsis "")
+      ;; tests fail for a strange reason
+      ;; "ERROR docs/conf.py - FileNotFoundError",
+      ;; but this file is in the checkout
+      (arguments
+       '(#:tests? #f))
+      (native-inputs
+       (list sdl2
+             python-pcpp
+             python-pycparser
+             python-requests
+             python-pytest-runner
+             python-pytest-benchmark
+             python-pytest-cov))
+      (propagated-inputs
+       (list python-numpy
+             python-typing-extensions
+             python-cffi))
+      (home-page "https://github.com/libtcod/python-tcod")
+      (synopsis
+       "This library is a Python cffi port of libtcod")
       (description
-       "")
-      (license #f))))
+       "A high-performance Python port of libtcod.
+Includes the libtcodpy module for backwards compatibility with older projects.")
+      (license license:bsd-2))))
+
+
 
 (define-public my-libtcod
   (package
