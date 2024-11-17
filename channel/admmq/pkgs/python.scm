@@ -7,6 +7,7 @@
   #:use-module (gnu packages game-development)
   #:use-module (gnu packages sdl)
   #:use-module (gnu packages python-xyz)
+  #:use-module (gnu packages python-build)
   #:use-module (guix packages)
   #:use-module (guix git-download)
   #:use-module (guix build-system python))
