@@ -86,4 +86,4 @@
               (file-name (git-file-name name version))
               (sha256
                (base32
-                "0pzr8ajmbqvh43ldjajx962xirj3rf8ayh344p6mqlrmb8gxrfr5"))))))
+                "1w27m5z4dsz4czcx6icvs150y7f4py0c67gijj4xbz9prf5wll7x"))))))
