@@ -82,7 +82,8 @@
       (propagated-inputs
        (list python-numpy
              python-typing-extensions
-             python-cffi))
+             python-cffi
+             my-libtcod))
       (home-page "https://github.com/libtcod/python-tcod")
       (synopsis
        "This library is a Python cffi port of libtcod")
