@@ -60,7 +60,7 @@
          (uri (git-reference
                (url "https://github.com/libtcod/python-tcod")
                (commit commit)
-               (recursive? #t)))
+               (recursive? #true)))
          (file-name (git-file-name name version))
          (sha256
           (base32
