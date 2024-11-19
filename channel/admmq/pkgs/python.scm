@@ -91,8 +91,6 @@
 Includes the libtcodpy module for backwards compatibility with older projects.")
       (license license:bsd-2))))
 
-
-
 (define-public my-libtcod
   (package
     (inherit libtcod)
