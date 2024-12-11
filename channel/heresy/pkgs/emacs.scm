@@ -12,7 +12,7 @@
   #:use-module (guix build-system emacs))
 
 (define-public emacs-stuff
-  (let ((commit "a613154282e108f8ad3051a9539f459c149b7071")
+  (let ((commit "f36c110dd8087068055f2544027cc4511dba5c12")
         (revision "0"))
     (package
       (name "emacs-stuff2")
@@ -20,7 +20,7 @@
       (source (origin
                 (method git-fetch)
                 (uri (git-reference
-                      (url "https://github.com/admmq/herecy")
+                      (url "https://github.com/admmq/heresy")
                       (commit commit)))
                 (file-name (git-file-name name version))
                 (sha256
