@@ -15,7 +15,7 @@
   (let ((commit "a613154282e108f8ad3051a9539f459c149b7071")
         (revision "0"))
     (package
-      (name "emacs-stuff")
+      (name "emacs-stuff2")
       (version (git-version "0.0.1" revision commit))
       (source (origin
                 (method git-fetch)
